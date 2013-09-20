@@ -1,6 +1,9 @@
 {
-  "name": "twitter hashtag monitor",
+  "name": "twitter-hashtag-monitor",
   "description": "monitor hashtag and show few latest items realtime.",
   "version": "0.0.1",
   "private": true,
+  "dependencies": {
+    "ntwitter": "*"
+  }
 }
