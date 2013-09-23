@@ -1,5 +1,5 @@
-var twitter = require('ntwitter');
-var credentials = require('./credentials.js');
+var twitter = require('ntwitter'),
+    credentials = require('./credentials.js');
 
 var t = new twitter({
     consumer_key: credentials.consumer_key,
