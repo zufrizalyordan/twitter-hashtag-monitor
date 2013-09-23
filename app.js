@@ -13,7 +13,7 @@ var t = new twitter({
 });
 
 app.get('/', function (req, res) {
-  res.send('Express running.');
+  res.sendfile(__dirname + '/index.html');
 });
 
 server.listen(3000);
