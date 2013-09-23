@@ -20,16 +20,16 @@ server.listen(3000);
 
 io.sockets.on('connection', function (socket) {
 
+  console.log('SOCKET CONNECTED\n');
   var track_item = '#android';
   t.stream(
     'statuses/filter',
     { track: [track_item] },
     function(stream) {
       stream.on('data', function(tweet) {
-          //if #hashtag is in the tweet text, emit via socket io
-          if(tweet.text.match(track_item)) {
-              console.log(tweet.text);
-          }
+        if(tweet.text.match(track_item)) {
+          socket.emit('tweets', { detail: tweet });
+        }
       });
     }
   );
