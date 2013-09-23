@@ -10,6 +10,7 @@
       $(function(){
         var socket = io.connect('http://localhost:3000');
         socket.on('tweets', function (data) {
+          var ctr = $('#tweets li').length;
           $('#tweets').append('<li>'+data.detail.text+'</li>');
         });
       });
