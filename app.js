@@ -21,15 +21,15 @@ server.listen(3000);
 io.sockets.on('connection', function (socket) {
 
   console.log('SOCKET CONNECTED\n');
-  var track_item = '#android';
+  var track_item = '#zy';
   t.stream(
     'statuses/filter',
     { track: [track_item] },
     function(stream) {
-      stream.on('data', function(tweet) {
+      stream.on('data', function(tweet) {        
         if(tweet.text.match(track_item)) {
           socket.emit('tweets', { detail: tweet });
-        }
+        }  
       });
     }
   );
