@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Twitter Hashtag Monitoring with Node JS, Socket.io, Express, ntwitter</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      $(function(){
+        var socket = io.connect('http://localhost:3000');
+        socket.on('tweets', function (data) {
+          console.log(data);
+        });
+      });
+    </script>
   </head>
   <body>
     
