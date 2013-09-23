@@ -1,5 +1,8 @@
 var twitter = require('ntwitter'),
-    credentials = require('./credentials.js');
+    credentials = require('./credentials.js'),
+    express = require('express'),
+    app = express(),
+    server = require('http').createServer(app);
 
 var t = new twitter({
     consumer_key: credentials.consumer_key,
@@ -7,6 +10,12 @@ var t = new twitter({
     access_token_key: credentials.access_token_key,
     access_token_secret: credentials.access_token_secret
 });
+
+app.get('/', function (req, res) {
+  res.send('Express running.');
+});
+
+server.listen(3000);
 
 var track_item = '#android';
 t.stream(
