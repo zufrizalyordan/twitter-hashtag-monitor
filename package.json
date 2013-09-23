@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "ntwitter"  : "*",
-    "socket.io" : "*"
+    "socket.io" : "*",
+    "express"   : "*"
   }
 }
