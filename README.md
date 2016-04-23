@@ -1,3 +1,8 @@
+### This repo is not actively maintained
+the deps are not maintained, so its better to use other dep such as
+
+https://github.com/passcod/mtwitter instead of ntwitter
+
 # Realtime twitter hashtag monitoring
 
 Monitor hastag with Node Js and show display result via socket io to html web page.
@@ -13,3 +18,4 @@ Monitor hastag with Node Js and show display result via socket io to html web pa
 4. open browser and type "http://localhost:3000"
 
 NodeJS, Express, nTwitter, Socket.io
+
